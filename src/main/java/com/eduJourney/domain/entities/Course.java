@@ -17,7 +17,9 @@ import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Data
@@ -36,7 +38,8 @@ public class Course {
   @ManyToOne
   @JoinColumn(name = "instructor_id", referencedColumnName = "id")  
   private User teacher;
-
+  @ToString.Exclude
+  @EqualsAndHashCode.Exclude
   @OneToMany(
     mappedBy = "course",
     fetch = FetchType.LAZY,
@@ -44,7 +47,8 @@ public class Course {
     orphanRemoval = true    
   )
   private List<Enrollment> enrollments; 
-
+@ToString.Exclude
+@EqualsAndHashCode.Exclude
   @OneToMany(
     mappedBy = "course",
     fetch = FetchType.LAZY,
@@ -52,7 +56,8 @@ public class Course {
     orphanRemoval = true
   )
   private List<Message> messages;
-  
+  @ToString.Exclude
+  @EqualsAndHashCode.Exclude
   @OneToMany(
     mappedBy = "course",
     fetch = FetchType.EAGER,

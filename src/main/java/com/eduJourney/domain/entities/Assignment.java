@@ -18,7 +18,9 @@ import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Data
@@ -36,7 +38,8 @@ public class Assignment {
   private String description;
   @Column(nullable = false)
   private LocalDate dueDate;
-   
+   @ToString.Exclude
+   @EqualsAndHashCode.Exclude
   @OneToMany(
     mappedBy = "assignment",
     fetch = FetchType.LAZY,
