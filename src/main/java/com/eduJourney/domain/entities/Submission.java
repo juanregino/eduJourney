@@ -1,5 +1,6 @@
 package com.eduJourney.domain.entities;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -34,7 +35,7 @@ public class Submission {
   @Column(nullable = false)
   private LocalDate date;
   @Column(precision = 5 , scale = 2 , nullable = false)
-  private Double grade;
+  private BigDecimal grade;
   
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "user_id", referencedColumnName = "id")
