@@ -53,7 +53,7 @@ public class User {
   private List<Enrollment> enrollments;
   
   @OneToMany(
-    mappedBy = "user",
+    mappedBy = "teacher",
     fetch = FetchType.LAZY,
     cascade = CascadeType.ALL,
     orphanRemoval = true

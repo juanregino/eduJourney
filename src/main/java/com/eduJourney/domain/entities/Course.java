@@ -35,7 +35,7 @@ public class Course {
   private String description;
   @ManyToOne
   @JoinColumn(name = "instructor_id", referencedColumnName = "id")  
-  private User instructor;
+  private User teacher;
 
   @OneToMany(
     mappedBy = "course",
