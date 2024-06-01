@@ -24,13 +24,5 @@ public class CourseRequest {
   @NotNull(message = "Teacher id cannot be null")
   @Min(value = 1, message = "Teacher id must be greater than 0")
   private UUID teacherId;
-  @NotNull(message = "Enrollment id cannot be null")
-  @Min(value = 1, message = "Enrollment id must be greater than 0")
-  private UUID enrollmentId;
-  @NotNull(message = "Message id cannot be null")
-  @Min(value = 1, message = "Message id must be greater than 0")
-  private UUID messageId;
-  @NotNull(message = "Lesson id cannot be null")
-  @Min(value = 1, message = "Lesson id must be greater than 0")
-  private UUID lessonId;
+
 }

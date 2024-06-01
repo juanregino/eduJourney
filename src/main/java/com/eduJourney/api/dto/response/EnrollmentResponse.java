@@ -14,6 +14,6 @@ import lombok.NoArgsConstructor;
 public class EnrollmentResponse {
   private UUID id;
   private LocalDate date;
-  private UserBasicResponse user;
-  private CourseBasicResponse course;
+  // private UserBasicResponse user;
+  // private CourseBasicResponse course;
 }

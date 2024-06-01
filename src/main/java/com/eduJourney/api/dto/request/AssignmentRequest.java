@@ -26,9 +26,7 @@ public class AssignmentRequest {
   @FutureOrPresent(message = "Due date cannot be in the past")
   @NotNull(message = "Due date cannot be null")
   private LocalDate dueDate;
-  @NotNull(message = "Submission id cannot be null")
-  @Min(value = 1, message = "Submission id must be greater than 0")
-  private UUID submissionId;
+ 
   @NotNull(message = "Lesson id cannot be null")
   @Min(value = 1, message = "Lesson id must be greater than 0")
   private UUID lessonId;
