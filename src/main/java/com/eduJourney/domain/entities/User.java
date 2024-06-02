@@ -48,7 +48,7 @@ public class User {
     mappedBy = "user",
     fetch = FetchType.LAZY,
     cascade = CascadeType.ALL,
-    orphanRemoval = true
+    orphanRemoval = false
 
 
   )
@@ -59,7 +59,7 @@ public class User {
     mappedBy = "teacher",
     fetch = FetchType.LAZY,
     cascade = CascadeType.ALL,
-    orphanRemoval = true
+    orphanRemoval = false
   )
   private List<Course> courses;
  @ToString.Exclude
@@ -68,7 +68,7 @@ public class User {
     mappedBy = "recipient",
     fetch = FetchType.LAZY,
     cascade = CascadeType.ALL,
-    orphanRemoval = true
+    orphanRemoval = false
   )
   private List<Message> messagesReceived;
 @ToString.Exclude
@@ -77,7 +77,7 @@ public class User {
     mappedBy = "sender",
     fetch = FetchType.LAZY, 
     cascade = CascadeType.ALL,
-    orphanRemoval = true
+    orphanRemoval = false
   )
   private List<Message> messagesSent;
 @ToString.Exclude
@@ -86,7 +86,7 @@ public class User {
     mappedBy = "user",
     fetch = FetchType.LAZY,
     cascade = CascadeType.ALL,
-    orphanRemoval = true
+    orphanRemoval = false
   )
   private List<Submission> submissions;
 
