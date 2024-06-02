@@ -8,8 +8,8 @@ services:
             POSTGRES_PASSWORD: postgres
             POSTGRES_USER: postgres
             POSTGRES_DB: eduJourney
-        volumes:
-            - ./data:/var/lib/postgresql/data
+        # volumes:
+        #     - ./data:/var/lib/postgresql/data
         restart: always
 
     pgadmin:
@@ -18,8 +18,8 @@ services:
         environment:
             - PGADMIN_DEFAULT_EMAIL=admin@admin.com
             - PGADMIN_DEFAULT_PASSWORD=admin
-        volumes:
-            - ./pgadmin:/root/.pgadmin
+        # volumes:
+        #     - ./pgadmin:/root/.pgadmin
         ports:
             - 5050:80
 
