@@ -35,8 +35,8 @@ public class MessageMapper {
     return Message.builder()
                  .content(request.getContent())
                  .date(request.getDate())
-                 .recipient(recipient)
-                 .sender(sender)
+                 .recipientId(recipient)
+                 .senderId(sender)
                  .course(course)
                  .build();
   
