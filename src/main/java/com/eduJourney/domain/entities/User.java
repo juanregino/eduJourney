@@ -65,7 +65,7 @@ public class User {
  @ToString.Exclude
  @EqualsAndHashCode.Exclude
   @OneToMany(
-    mappedBy = "recipient",
+    mappedBy = "recipientId",
     fetch = FetchType.LAZY,
     cascade = CascadeType.ALL,
     orphanRemoval = false
@@ -74,7 +74,7 @@ public class User {
 @ToString.Exclude
 @EqualsAndHashCode.Exclude
   @OneToMany(
-    mappedBy = "sender",
+    mappedBy = "senderId",
     fetch = FetchType.LAZY, 
     cascade = CascadeType.ALL,
     orphanRemoval = false
